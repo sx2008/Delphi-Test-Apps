@@ -1,0 +1,8 @@
+[General]
+Name=RandomTest
+Project=1
+[Classes]
+Count=3
+Class0="TForm1","TForm","Unit1","14","C:\Delphi\Test\RandomTest\Unit1.pas"
+Class1="TUniqueRandomSequenceGenerator","","UniqueRandom","0","C:\Delphi\Test\RandomTest\UniqueRandom.pas"
+Class2="TUniqueRandomSequenceGenerator2","","UniqueRandom","0","C:\Delphi\Test\RandomTest\UniqueRandom.pas"

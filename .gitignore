@@ -1,0 +1,14 @@
+*.~*
+*.exe
+*.local
+*.identcache
+*.res
+*.dcu
+*.zip
+*.rar
+*.bak
+*.map
+*.gex
+thumbs.db
+__history/
+
