@@ -1,9 +1,9 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'DP - Test Zufallszahlen ohne zur'#252'cklegen'
-  ClientHeight = 254
-  ClientWidth = 368
+  Width = 376
+  Height = 281
+  Caption = 'DP - Test Zufallszahlen ohne zurücklegen'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,10 +21,6 @@ object Form1: TForm1
     Align = alClient
     ScrollBars = ssVertical
     TabOrder = 0
-    ExplicitLeft = 272
-    ExplicitTop = 80
-    ExplicitWidth = 208
-    ExplicitHeight = 174
   end
   object Panel1: TPanel
     Left = 0

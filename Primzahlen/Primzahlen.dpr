@@ -1,15 +1,14 @@
-program RandomTest;
+program Primzahlen;
 
 uses
   Forms,
   Unit1 in 'Unit1.pas' {Form1},
-  UniqueRandom in 'UniqueRandom.pas';
+  SieveOfEratosthenes in 'SieveOfEratosthenes.pas';
 
-{$R *.res}
+{$R *.RES}
 
 begin
   Application.Initialize;
-  //Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
