@@ -9,6 +9,9 @@
 *.bak
 *.map
 *.gex
+*.dsk
+*.cfg
+
 thumbs.db
 __history/
 
