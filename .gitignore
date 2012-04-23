@@ -11,6 +11,7 @@
 *.gex
 *.dsk
 *.cfg
+*.drc
 
 thumbs.db
 __history/
