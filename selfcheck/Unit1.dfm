@@ -1,8 +1,8 @@
 object Form1: TForm1
   Left = 307
   Top = 138
-  Width = 453
-  Height = 253
+  Width = 383
+  Height = 149
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,12 +14,21 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 60
-    Top = 65
+    Left = 30
+    Top = 28
     Width = 75
     Height = 25
     Caption = 'Button1'
     TabOrder = 0
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 185
+    Top = 27
+    Width = 100
+    Height = 25
+    Caption = 'SHA Selftest'
+    TabOrder = 1
+    OnClick = Button2Click
   end
 end
