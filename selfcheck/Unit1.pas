@@ -68,7 +68,7 @@ Function SelfCheck: Boolean;
           If B Then Begin
             MD5Init(MD5);
             MD5Update(MD5, P, i); 
-            MD5Update(MD5, P + i + Length(SelfCheckData), FileSize - i - Length(SelfCheckData)); 
+            MD5Update(MD5, P[i + Length(SelfCheckData)], FileSize - i - Length(SelfCheckData)); 
             MD5Final(MD5); 
             Result := True;
             For i2 := 0 to High(MD5.digest) do
