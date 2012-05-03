@@ -3,7 +3,7 @@ unit Unit1;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Windows, Messages, SysUtils, {Variants,} Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls;
 
 type
@@ -49,7 +49,10 @@ begin
 
   case found of
     bsFound:
+    begin
       Caption := IntToStr(index);
+      Memo1.SelStart := index;
+    end;
     bsNotFound:
       Caption := 'nicht gefunden';
     bsLower:

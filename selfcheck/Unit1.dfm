@@ -23,12 +23,30 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 185
+    Left = 184
     Top = 27
     Width = 100
     Height = 25
     Caption = 'SHA Selftest'
     TabOrder = 1
     OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 184
+    Top = 54
+    Width = 100
+    Height = 25
+    Caption = 'MD4 Selftest'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 184
+    Top = 81
+    Width = 100
+    Height = 25
+    Caption = 'MD5 Selftest'
+    TabOrder = 3
+    OnClick = Button4Click
   end
 end

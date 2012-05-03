@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 418
+  Top = 240
+  Width = 303
+  Height = 213
   Caption = 'Binary Search and Quicksort Demo'
-  ClientHeight = 186
-  ClientWidth = 295
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

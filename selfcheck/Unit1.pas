@@ -10,8 +10,12 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -67,7 +71,7 @@ Function SelfCheck: Boolean;
             If (P + i + i2)^ <> SelfCheckData[i2] Then B := False; 
           If B Then Begin
             MD5Init(MD5);
-            MD5Update(MD5, P, i); 
+            MD5Update(MD5, P, i);
             MD5Update(MD5, P[i + Length(SelfCheckData)], FileSize - i - Length(SelfCheckData)); 
             MD5Final(MD5); 
             Result := True;
@@ -122,6 +126,22 @@ begin
       ShowMessage('SHA Selftest OK')
    else
       ShowMessage('SHA Selftest failed!');
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+   if MD4_Selftest then
+      ShowMessage('MD4 Selftest OK')
+   else
+      ShowMessage('MD4 Selftest failed!');
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+   if MD5_Selftest then
+      ShowMessage('MD5 Selftest OK')
+   else
+      ShowMessage('MD5 Selftest failed!');
 end;
 
 end.
