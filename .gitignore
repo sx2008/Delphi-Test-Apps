@@ -4,15 +4,16 @@
 *.identcache
 *.res
 *.dcu
-*.zip
-*.rar
-*.bak
 *.map
 *.gex
 *.dsk
 *.cfg
 *.drc
-
-thumbs.db
 __history/
+
+*.zip
+*.rar
+*.bak
+*.old
+thumbs.db
 
