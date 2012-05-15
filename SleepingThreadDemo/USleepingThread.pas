@@ -11,13 +11,13 @@ type
     FBusy : Boolean;
   protected
     procedure Execute;override;
-    procedure DoTerminate;override;
 
     procedure DoWork;virtual;abstract;
   public
     constructor Create(CreateSuspended: Boolean);
     destructor Destroy; override;
     procedure WakeUp;
+    procedure Terminate;
     property Busy:Boolean read FBusy;
   end;
 
@@ -28,29 +28,27 @@ implementation
 
 constructor TSleepingThread.Create(CreateSuspended: Boolean);
 begin
-   inherited Create(CreateSuspended);
+   inherited Create(True);
    FEvent := TSimpleEvent.Create;
+   if not CreateSuspended then
+      Resume;
 end;
 
 destructor TSleepingThread.Destroy;
 begin
+   Terminate;
    FEvent.Free;
    inherited;
 end;
 
 
-procedure TSleepingThread.DoTerminate;
-begin
-   inherited;
-   if not FBusy and Terminated then
-      WakeUp;
-end;
-
 procedure TSleepingThread.Execute;
+const
+   TIME_OUT = 20000;
 begin
    while not Terminated do
    begin
-      case FEvent.WaitFor(1000) of
+      case FEvent.WaitFor(TIME_OUT) of
          wrSignaled:
          if not Terminated then
          begin
@@ -71,6 +69,13 @@ begin
             Exit;
       end;
    end;
+end;
+
+procedure TSleepingThread.Terminate;
+begin
+   inherited Terminate;
+   if not FBusy then
+      WakeUp;
 end;
 
 procedure TSleepingThread.WakeUp;
