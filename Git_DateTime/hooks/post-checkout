@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+Git_Datetime -r
+
+exit 0

@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+
+echo "create file .gitfiledata"
+pwd
+Git_Datetime
+
+git add .gitfiledata
+
+exit 0
