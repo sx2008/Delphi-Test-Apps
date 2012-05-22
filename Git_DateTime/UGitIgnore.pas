@@ -6,6 +6,7 @@ uses Classes;
 
 type
 
+  // checks if a filename matches a pattern from the .gitignore file
   TGitIgnore = class(TStringList)
   public
     procedure Clean;
@@ -25,8 +26,7 @@ uses SysUtils;
  * NAME:    StrMatch
  * DESC:    Vergleicht 2 Strings unter Berücksichtigung von Wildcards.
  *
- *          Basierend auf:
- *             TWildMatch Komponente von Elliott Shevin (shevine@aol.com)
+ *          based on component TWildMatch from Elliott Shevin (shevine @ aol.com)
  *
  *          Beispiel:
  *             StrMatch('Hallo Welt!','H?llo W*')     ==> True
@@ -41,8 +41,6 @@ uses SysUtils;
  *          CaseSensitive: boolean;
  *             Berücksichtigung von Groß/Kleinschreibung.
  * RESULT:  True, falls die Strings übereinstimmen.
- * CREATED: 08-10-2001/Haide
- * CHANGED: 08-10-2001/Haide
  *************************************************************************}
 function StrMatch(const SearchString, Mask : string; const CaseSensitive: Boolean = True) : boolean;
 const
