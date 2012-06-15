@@ -49,7 +49,8 @@ function TApplication_.MethodeDieExceptionVerursacht: WideString;
 begin
    Result := 'dieser String kommt nie zurück';
 
-   
+   // mit Absicht eine Exception erzeugen,
+   // die dann der Aufrufer bekommt
    raise EOleSysError.Create('IApplication.GetPath: Invalid Argument', ErrorNumberToHResult(150), 0);
 end;
 

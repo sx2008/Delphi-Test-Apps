@@ -1,13 +1,14 @@
 V1.0
+.gitfiledata|2012-05-22T11:31:20
 .gitignore|2012-05-11T09:36:38
-ActiveXStarterKit\ActiveXStarterKit.dof|2012-04-04T13:16:02
+ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
 ActiveXStarterKit\ActiveXStarterKit.tlb|2012-04-04T13:14:54
 ActiveXStarterKit\ActiveXStarterKit_TLB.pas|2012-04-04T13:14:54
 ActiveXStarterKit\MainForm.dfm|2007-02-09T18:20:32
 ActiveXStarterKit\MainForm.pas|2007-02-09T18:27:56
 ActiveXStarterKit\TestScript.vbs|2012-04-04T13:16:47
-ActiveXStarterKit\UApplication_impl.pas|2012-04-04T13:16:02
+ActiveXStarterKit\UApplication_impl.pas|2012-06-15T14:33:44
 AdoStarterKit\AdoStarterKit.dpr|2012-04-17T16:59:51
 AdoStarterKit\AdoStarterKit.dproj|2012-04-17T16:59:51
 AdoStarterKit\BeispielDB.mdb|2012-04-17T16:59:51
