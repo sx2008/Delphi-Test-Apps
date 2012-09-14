@@ -42,6 +42,7 @@ uses MSXML2_TLB, JclStrings, ComObj, VariantUtils2;
 Hinweis zum Import der Unit MSXML2_TLB
 1.) Datei -> alle schliesen
 2.) Projekt -> Typbibliothek importieren...
+bei höheren Delphi Versionen geht das über Komponente -> Komponente importieren
 3.) Auswählen: Microsoft XML (Version 4)
 4.) Unit anlegen klicken
 }
