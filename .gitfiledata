@@ -1,5 +1,5 @@
 V1.0
-.gitfiledata|2012-06-15T15:06:53
+.gitfiledata|2012-11-13T17:37:42
 .gitignore|2012-05-11T09:36:38
 ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
@@ -27,7 +27,6 @@ BlendBitmap\BlendBitmapDemo.dpr|2007-09-17T17:40:54
 BlendBitmap\Unit1.dfm|2012-04-18T16:32:28
 BlendBitmap\Unit1.pas|2012-04-18T16:32:30
 BSearchDemo\BinarySearch.pas|2012-04-17T16:59:51
-BSearchDemo\BSearch.dof|2012-04-26T16:25:44
 BSearchDemo\BSearch.dpr|2012-04-26T16:24:04
 BSearchDemo\BSearch.dproj|2012-04-17T16:59:51
 BSearchDemo\desktop.ini|2012-04-17T16:59:51
@@ -76,8 +75,6 @@ Getriebe\GetriebeScreenshot.gif|2012-04-17T16:59:51
 Getriebe\SieveOfEratosthenes.pas|2012-04-17T16:59:51
 Getriebe\Unit1.dfm|2012-04-17T16:59:51
 Getriebe\Unit1.pas|2012-04-17T16:59:51
-Git_DateTime\.gitfiledata|2012-05-22T09:57:40
-Git_DateTime\.gitignore|2012-05-22T09:57:28
 Git_DateTime\FileScanner.pas|2012-05-21T14:04:04
 Git_DateTime\Git_DateTime.dof|2012-05-22T09:52:24
 Git_DateTime\Git_DateTime.dpr|2012-05-22T09:52:14
@@ -105,6 +102,12 @@ LCDMonitorTest\LCDmonitortest.dof|2003-11-05T12:23:52
 LCDMonitorTest\LCDmonitortest.dpr|2003-11-05T12:23:26
 LCDMonitorTest\UnitMonitor.dfm|2007-05-09T15:52:58
 LCDMonitorTest\UnitMonitor.pas|2012-04-23T15:35:42
+MapiSendMail\MapiSendMail.dof|2012-11-13T17:34:45
+MapiSendMail\MapiSendMail.dpr|2012-11-13T17:34:34
+MapiSendMail\Testmail.txt|2006-03-16T17:07:02
+MapiSendMail\testsend.bat|2006-03-24T12:45:56
+MapiSendMail\UCommandline.pas|2006-03-16T17:23:58
+MapiSendMail\xx.txt|2006-03-24T12:46:32
 PageListDemo\PageListDemo.dpr|2012-04-17T16:59:51
 PageListDemo\PageListDemo.dproj|2012-04-17T16:59:51
 PageListDemo\UMainForm.dfm|2012-04-17T16:59:51

@@ -1,0 +1,32 @@
+TO:shmia@bizerba.de 
+SUBJECT:super email 
+ATTACHMENT:testsend.bat 
+Hallo, das Programm ist gut !! 
+Noch ne Zeile 
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 6CC4-2C6E
+
+ Verzeichnis von C:\delphi\MapiSendMail
+
+24.03.2006  13:46    <DIR>          .
+24.03.2006  13:46    <DIR>          ..
+17.03.2006  16:01            22.407 Kopie von Testmail.txt
+17.03.2006  16:09               918 MapiSendMail.cfg
+17.03.2006  16:09             2.284 MapiSendMail.dof
+17.03.2006  16:08             4.175 MapiSendMail.dpr
+17.03.2006  16:18             6.073 MapiSendMail.dsk
+24.03.2006  13:45           105.472 MapiSendMail.exe
+17.03.2006  15:14            50.320 MapiSendMail.zip
+17.03.2006  16:03             4.161 MapiSendMail.~dpr
+17.03.2006  15:57             5.794 MapiSendMail.~dsk
+16.03.2006  18:07               716 Testmail.txt
+24.03.2006  13:45               330 testsend.bat
+17.03.2006  14:58             1.721 UCommandline.dcu
+16.03.2006  18:23             2.280 UCommandline.pas
+16.03.2006  17:26             3.282 UCommandline.~pas
+24.03.2006  13:46               119 xx.txt
+              15 Datei(en)        210.052 Bytes
+
+     Anzahl der angezeigten Dateien:
+              15 Datei(en)        210.052 Bytes
+               2 Verzeichnis(se), 26.901.565.440 Bytes frei

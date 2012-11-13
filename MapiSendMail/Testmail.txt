@@ -1,0 +1,23 @@
+TO:test1@aol.com
+TO:test2@aol.com
+CC:kopie@aol.de
+BCC:unsichtbarekopie@aol.com
+SUBJECT:Test MapiSendMail 1.0
+ATTACHMENT:testmail.txt
+ATTACHMENT:mapisendmail.exe
+Hier beginnt der Body der EMail
+
+Beschreibung von MapiSendMail
+=============================
+
+mit MapiSendMail können Emails von der Kommandozeile heraus gesendet werden.
+dazu muss eine Datei, mit dem gleichen Aufbau wie diese Datei erzeugt werden.
+
+Die erste Zeile, die NICHT mit TO:, CC:, BCC:, SUBJECT: oder ATTACHMENT: beginnt,
+ist der Anfang der Nachricht (BODY).
+
+Zeilen mit TO:, CC:, BCC: oder ATTACHMENT: können beliebig oft 
+und in beliebiger Reihenfolge wiederholt werden.
+Es darf nur eine Zeile mit SUBJECT: vorkommen.
+
+
