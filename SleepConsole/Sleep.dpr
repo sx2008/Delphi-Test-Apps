@@ -21,27 +21,36 @@ begin
 end;
 
 
+procedure ShowUsage;
+begin
+   // Hilfe anzeigen
+   Writeln('Usage: Sleep [timeout]');
+   Writeln('Examples: Sleep 500ms');
+   Writeln('          Sleep 20s');
+   Writeln('          Sleep 3min');
+   Writeln('          Sleep 4h');
+end;
+
 
 var
-   timeout, mult : Integer;
+   mult, sleeptime : Integer;
+   timeout : Double;
    s : String;
 begin
-   timeout := 1000;   // Default Wartezeit 1000ms
 
    if ParamCount >= 1 then
    begin
-      s := ParamStr(1);
-      if (s = '/?') or (s = '-?') or (s = '-h') or (s = '/h') then
+      if FindCmdLineSwitch('h', ['-', '/'], True)
+      or FindCmdLineSwitch('?', ['-', '/'], True)
+      or FindCmdLineSwitch('help', ['-', '/'], True)
+      then
       begin
          // Hilfe anzeigen
-         Writeln('Usage: Sleep [timeout]');
-         Writeln('Examples: Sleep 500ms');
-         Writeln('          Sleep 20s');
-         Writeln('          Sleep 3min');
-         Writeln('          Sleep 4h');
+         ShowUsage;
          Exit;
       end;
 
+      s := ParamStr(1);      
 
       if ContainsString(s, 'ms') then
          mult := 1
@@ -54,12 +63,15 @@ begin
       else
          mult := 1;
 
-      timeout := StrToInt(s);
+      timeout := StrToFloat(s);
       timeout := timeout * mult;
-   end;
+   end
+   else
+      timeout := 1000;   // Default Wartezeit 1000ms
 
-   Writeln('Sleeping ', timeout, ' ms ....');
+   sleeptime := round(timeout);
+   Writeln('Sleeping ', sleeptime, ' ms ....');
 
-   Windows.Sleep(timeout);
+   Windows.Sleep(sleeptime);
 
 end.
