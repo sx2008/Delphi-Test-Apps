@@ -1,5 +1,5 @@
 V1.0
-.gitfiledata|2012-11-13T17:41:49
+.gitfiledata|2012-11-27T16:57:38
 .gitignore|2012-05-11T09:36:38
 ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
@@ -127,6 +127,18 @@ PaintBoxImageDemo\Screenshot.png|2011-01-31T16:24:28
 PaintBoxImageDemo\UCountryFlag.pas|2011-01-31T15:51:42
 PaintBoxImageDemo\Unit1.dfm|2011-01-31T15:50:52
 PaintBoxImageDemo\Unit1.pas|2011-01-31T16:21:02
+PearsonHash\PearsonHash.dof|2012-09-11T15:16:47
+PearsonHash\PearsonHash.dpr|2012-09-11T15:15:50
+PearsonHash\Readme.txt|2012-09-12T09:12:55
+PearsonHash\ttt\PearsonTest.dof|2012-12-03T11:01:51
+PearsonHash\ttt\PearsonTest.dpr|2012-12-03T11:01:52
+PearsonHash\ttt\Unit1.dfm|2012-09-10T15:53:40
+PearsonHash\ttt\Unit1.pas|2012-12-03T12:12:08
+PearsonHash\UBuckets.pas|2012-09-11T17:41:06
+PearsonHash\Unit1.dfm|2012-09-17T17:11:20
+PearsonHash\Unit1.pas|2012-09-17T17:18:12
+PearsonHash\UPearsonHash.pas|2012-09-17T17:25:56
+PearsonHash\URandomString.pas|2012-09-11T16:03:08
 PeriodicAction\PeriodicAction.dof|2009-12-03T17:40:57
 PeriodicAction\PeriodicAction.dpr|2009-12-03T17:40:40
 PeriodicAction\Unit1.dfm|2009-12-03T17:49:06
@@ -144,7 +156,7 @@ RandomTest\RandomTest.dproj|2012-04-17T16:59:51
 RandomTest\UniqueRandom.pas|2012-04-17T16:59:51
 RandomTest\Unit1.dfm|2012-04-17T17:31:26
 RandomTest\Unit1.pas|2012-04-17T17:31:46
-Readme.txt|2012-04-18T17:34:38
+Readme.md|2012-12-03T12:13:44
 ResolveHostName\Demo.dof|2004-05-05T09:38:32
 ResolveHostName\Demo.dpr|2000-12-09T17:37:20
 ResolveHostName\MainFrm.dfm|2009-11-09T17:08:22
