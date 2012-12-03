@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 307
   Top = 138
-  Width = 1049
+  Width = 849
   Height = 636
   Caption = 'Pearson Hash Code Generator (Monte Carlo Method)'
   Color = clBtnFace
@@ -158,21 +158,12 @@ object Form1: TForm1
   end
   object Button2: TButton
     Left = 30
-    Top = 533
+    Top = 527
     Width = 160
     Height = 25
     Caption = 'Add 100 Random Strings'
     TabOrder = 2
     OnClick = Button2Click
-  end
-  object Button1: TButton
-    Left = 286
-    Top = 572
-    Width = 144
-    Height = 25
-    Caption = 'Make Pascal Code'
-    TabOrder = 3
-    OnClick = Button1Click
   end
   object BtnOpenFile: TButton
     Left = 30
@@ -180,7 +171,7 @@ object Form1: TForm1
     Width = 117
     Height = 25
     Caption = 'Load Text file...'
-    TabOrder = 4
+    TabOrder = 3
     OnClick = BtnOpenFileClick
   end
   object PageControl1: TPageControl
@@ -189,7 +180,7 @@ object Form1: TForm1
     Width = 486
     Height = 450
     ActivePage = TabSheet1
-    TabOrder = 5
+    TabOrder = 4
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Results'
@@ -203,7 +194,7 @@ object Form1: TForm1
       end
     end
     object TabSheet2: TTabSheet
-      Caption = 'Pearson Hast Table'
+      Caption = 'Pearson Hash Table'
       ImageIndex = 1
       object Memo3: TMemo
         Left = 0
@@ -221,7 +212,7 @@ object Form1: TForm1
       end
     end
     object TabSheet3: TTabSheet
-      Caption = 'Source Code'
+      Caption = 'Pascal Source Code'
       ImageIndex = 2
       object Memo4: TMemo
         Left = 0

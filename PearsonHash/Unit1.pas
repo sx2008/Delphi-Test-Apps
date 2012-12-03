@@ -11,7 +11,6 @@ type
     Memo1: TMemo;
     ButtonStart: TButton;
     Button2: TButton;
-    Button1: TButton;
     BtnOpenFile: TButton;
     OpenDialog1: TOpenDialog;
     PageControl1: TPageControl;
@@ -25,7 +24,6 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure ButtonStartClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure BtnOpenFileClick(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
   private
@@ -280,13 +278,6 @@ begin
          list[hash] := s;
    end;
 end;
-
-procedure TForm1.Button1Click(Sender: TObject);
-begin
-   Memo4.Clear;
-   SavePascalCode(Memo4.Lines);
-end;
-
 
 procedure TForm1.SavePascalCode(list: TStrings);
 var
