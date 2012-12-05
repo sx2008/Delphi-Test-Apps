@@ -9,7 +9,7 @@ für Delphi-Praxis by shmia
 
 interface
 
-
+uses Windows, SysUtils;
 
 type
 
@@ -39,10 +39,13 @@ private
   FStartDepth : Integer;
   procedure DoFound(const FileInformation:TFileInformation);virtual;
 
+  class procedure CopyFileInfo(const SR : TSearchRec; var FI : TFileInformation);
+
   procedure ScanDirInternal(const Directory:string; depth:Integer);
+  procedure ScanDirInternal2(const Directory:string; depth:Integer);
 
 public
-  procedure ScanDir(const Directory:string);  // Verzeichnis scannen
+  procedure ScanDir(const Directory:string; DirsAtTheEnd:Boolean);  // Verzeichnis scannen
 
   procedure Stop;  // Scanvorgang anhalten
   procedure StopDirectory; // nur Scanvorgang im aktuellen Verzeichnis unterbrechen
@@ -56,7 +59,7 @@ end;
 
 implementation
 
-uses Windows, SysUtils;
+uses Classes;
 
 
 const
@@ -102,15 +105,45 @@ begin
       Stop; // ohne Eventhandler macht es keinen Sinn
 end;
 
-procedure TFileScanner.ScanDir(const Directory: string);
+procedure TFileScanner.ScanDir(const Directory: string; DirsAtTheEnd:Boolean);
 begin
    if Recursive then
       FStartDepth := 255
    else
       FStartDepth := 0;
    FStopped := False;
-   ScanDirInternal(IncludeTrailingBackslash(Directory), FStartDepth)
+   if DirsAtTheEnd then
+      ScanDirInternal2(IncludeTrailingBackslash(Directory), FStartDepth)
+   else
+      ScanDirInternal(IncludeTrailingBackslash(Directory), FStartDepth);
 end;
+
+class procedure TFileScanner.CopyFileInfo(const SR: TSearchRec; var FI: TFileInformation);
+begin
+   FI.Name := SR.Name;
+   FI.Size := SR.Size;
+   FI.IsDir := False;
+
+   FI.Created := FileTimeToSystemDateTime(SR.FindData.ftCreationTime);
+   FI.LastWrite := FileTimeToSystemDateTime(SR.FindData.ftLastWriteTime);
+   FI.LastAccess := FileTimeToSystemDateTime(SR.FindData.ftLastAccessTime);
+{
+   FI.Created := FileTimeToLocalDateTime(SR.FindData.ftCreationTime);
+   FI.LastWrite := FileTimeToLocalDateTime(SR.FindData.ftLastWriteTime);
+   FI.LastAccess := FileTimeToLocalDateTime(SR.FindData.ftLastAccessTime);
+}
+   FI.ReadOnlyFlag := (SR.FindData.dwFileAttributes and faReadOnly) <> 0;
+   FI.HiddenFlag   := (SR.FindData.dwFileAttributes and faHidden) <> 0;
+   FI.SystemFlag   := (SR.FindData.dwFileAttributes and faSysFile) <> 0;
+   FI.ArchiveFlag  := (SR.FindData.dwFileAttributes and faArchive) <> 0;
+
+   (*
+   TODO:
+   Size mit 64-Bit Dateigrösse füllen
+   *)
+end;
+
+
 
 procedure TFileScanner.ScanDirInternal(const Directory: string; depth:Integer);
 var
@@ -136,29 +169,7 @@ begin
          end
          else
          begin
-            FI.Name := SR.Name;
-            FI.Size := SR.Size;
-            FI.IsDir := False;
-
-            FI.Created := FileTimeToSystemDateTime(SR.FindData.ftCreationTime);
-            FI.LastWrite := FileTimeToSystemDateTime(SR.FindData.ftLastWriteTime);
-            FI.LastAccess := FileTimeToSystemDateTime(SR.FindData.ftLastAccessTime);
-{
-            FI.Created := FileTimeToLocalDateTime(SR.FindData.ftCreationTime);
-            FI.LastWrite := FileTimeToLocalDateTime(SR.FindData.ftLastWriteTime);
-            FI.LastAccess := FileTimeToLocalDateTime(SR.FindData.ftLastAccessTime);
-}
-
-            FI.ReadOnlyFlag := (SR.FindData.dwFileAttributes and faReadOnly) <> 0;
-            FI.HiddenFlag   := (SR.FindData.dwFileAttributes and faHidden) <> 0;
-            FI.SystemFlag   := (SR.FindData.dwFileAttributes and faSysFile) <> 0;
-            FI.ArchiveFlag  := (SR.FindData.dwFileAttributes and faArchive) <> 0;
-
-            (*
-            TODO:
-            Size mit 64-Bit Dateigrösse füllen
-            *)
-
+            CopyFileInfo(SR, FI);
             DoFound(FI);
          end;
        until FStopped or (FindNext(SR) <> 0);
@@ -167,6 +178,54 @@ begin
      end;
    end;
 end;
+
+
+procedure TFileScanner.ScanDirInternal2(const Directory: string; depth: Integer);
+var
+   SR   : TSearchRec;
+   FI : TFileInformation;
+   dlist : TStringList;
+begin
+   dlist := TStringList.Create;
+
+   FStopDir := False;
+   FI.Path := Directory;
+   FI.Depth := FStartDepth-depth;
+   FI.IsDir := True;
+
+   if FindFirst(Directory+'*.*',faAnyFile,SR) = 0 then
+   begin
+      try
+      DoFound(FI);
+       if FStopDir then
+         Exit;
+       repeat
+         if (SR.Attr and faDirectory) = faDirectory then
+         begin
+           if (depth > 0) and (SR.Name <> '.') and (SR.Name <> '..') then
+             dlist.Add(IncludeTrailingBackSlash(Directory+SR.Name));
+         end
+         else
+         begin
+            CopyFileInfo(SR, FI);
+            DoFound(FI);
+         end;
+       until FStopped or (FindNext(SR) <> 0);
+
+     while dlist.Count > 0 do
+     begin
+        ScanDirInternal2(dlist[0], depth-1);
+        dlist.Delete(0);
+     end;
+
+     finally
+       FindClose(SR);
+       dlist.Free;
+     end;
+   end;
+end;
+
+
 
 procedure TFileScanner.Stop;
 begin

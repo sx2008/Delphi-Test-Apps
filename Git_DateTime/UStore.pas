@@ -66,7 +66,12 @@ begin
    if FileInformation.IsDir then
    begin
       if ExtractFileName(ExcludeTrailingBackslash(FileInformation.Path)) = '.git' then
+      begin
          (Sender as TFileScanner).StopDirectory;
+         Exit;
+      end;
+      relpath := ExtractRelativePath(FBasepath, FileInformation.Path);
+      FList.Add('['+relpath+']');
       Exit;
    end;
 
@@ -74,9 +79,7 @@ begin
       Exit;
 
 
-   relpath := ExtractRelativePath(FBasepath, FileInformation.Path);
-
-   s := relpath+FileInformation.Name+ '|'+
+   s := FileInformation.Name+ '|'+
       ISO8601DateTimeToStr(FileInformation.LastWrite);
    FList.Add(s);
 end;
@@ -85,8 +88,8 @@ end;
 procedure TFileInfoSaver.ScanDir(const dir:string);
 begin
    FBasePath := dir;
-   FList.Add('V1.0');
-   FScanner.ScanDir(dir);
+   FList.Add('V2.0');
+   FScanner.ScanDir(dir, True);
    FList.SaveToFile(DestFile);
 end;
 

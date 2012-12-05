@@ -39,13 +39,26 @@ var
    s : String;
    fn : string;
    dt : TDateTime;
+   relpath : string;
 begin
    for i := 1 to FList.Count - 1 do
    begin
       s := FList[i];
+
+      if (s <> '') and (s[1]='[') then
+      begin
+         // read relative path
+         relpath := copy(s, 2, Length(s)-2);
+         Continue;
+      end;
+
+
       fn := StrToken(s, '|');
 
-      fn := FBasePath + fn;
+      if relpath <> '' then
+         fn := ExtractFileName(fn);  // for backward compatibility
+
+      fn := FBasePath + relpath + fn;
 
       if FileExists(fn) then
       begin
