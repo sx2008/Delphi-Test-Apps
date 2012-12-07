@@ -54,7 +54,8 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
    FYearBoldManager := TYearBoldManager.Create;
-   FYearBoldManager.MakeBold(12, 24);
+   FYearBoldManager.MakeBold(12, 24);  // Weihnachten , X-Mas
+   FYearBoldManager.MakeBold(12, 31);  // Sylvester
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
