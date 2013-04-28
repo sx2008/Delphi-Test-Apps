@@ -15,31 +15,63 @@ type
       function GetPrimes(const i: Cardinal): Cardinal;
       function GetPrimesFound: Cardinal;
       procedure SetMaxValue(AValue: Cardinal);
+      function CountPrimes:Cardinal;
+      procedure SavePrimesToArray;
     public
       constructor Create(AMaxValue: Cardinal);
       destructor Destroy;override;
       property MaxValue: Cardinal read fMaxValue write SetMaxValue;
       property Primes[const index: Cardinal]: Cardinal read GetPrimes;
       property PrimesFound: Cardinal read GetPrimesFound;
-      procedure FindPrimes(); 
+      procedure FindPrimes();
   end; 
 
 implementation 
 
 { TSieveOfEratosthenes } 
 
-constructor TSieveOfEratosthenes.Create(AMaxValue: Cardinal); 
-begin 
+constructor TSieveOfEratosthenes.Create(AMaxValue: Cardinal);
+begin
    inherited Create;
    fSieve := TBits.Create;
    MaxValue := AMaxValue;
-end; 
+end;
 
 destructor TSieveOfEratosthenes.Destroy;
 begin
    fSieve.Free;
   inherited;
 end;
+
+
+function TSieveOfEratosthenes.CountPrimes: Cardinal;
+var
+  i : Integer;
+begin
+  Result := 0;
+  for i := 2 to MaxValue do
+    if not fSieve.Bits[i] then
+      Inc(Result);
+end;
+
+
+procedure TSieveOfEratosthenes.SavePrimesToArray;
+var
+  i, j : Integer;
+begin
+  SetLength(fPrimes, fPrimesFound);
+  j := 0;
+
+  for i := 2 to MaxValue do begin
+    if fSieve.Bits[i] = false then
+    begin
+      fPrimes[j] := i;
+      Inc(j);
+    end;
+  end;
+end;
+
+
 
 procedure TSieveOfEratosthenes.FindPrimes;
 var i, j: Cardinal;
@@ -63,37 +95,26 @@ begin
   end;
 
   // Zählen der gefundenen Primzahlen
-  fPrimesFound := 0;
-  for i := 2 to MaxValue do
-    if fSieve.Bits[i] = false then
-      Inc(fPrimesFound);
+  fPrimesFound := CountPrimes;
 
-   // speichern der Primzahl
-   SetLength(fPrimes, fPrimesFound);
-   j := 0;
-
-  for i := 2 to MaxValue do begin
-    if fSieve.Bits[i] = false then
-    begin
-      fPrimes[j] := i;
-      Inc(j);
-    end;
-  end;
+   // speichern der Primzahlen
+   SavePrimesToArray;
 end;
 
-function TSieveOfEratosthenes.GetPrimes(const i: Cardinal): Cardinal; 
-begin 
-  Result := fPrimes[i]; 
-end; 
+function TSieveOfEratosthenes.GetPrimes(const i: Cardinal): Cardinal;
+begin
+  Result := fPrimes[i];
+end;
 
-function TSieveOfEratosthenes.GetPrimesFound: Cardinal; 
-begin 
-  Result := Length(fPrimes); 
-end; 
+function TSieveOfEratosthenes.GetPrimesFound: Cardinal;
+begin
+  Result := Length(fPrimes);
+end;
 
-procedure TSieveOfEratosthenes.SetMaxValue(AValue: Cardinal); 
+procedure TSieveOfEratosthenes.SetMaxValue(AValue: Cardinal);
 begin
   fMaxValue := AValue;
-end; 
+end;
+
 
 end.

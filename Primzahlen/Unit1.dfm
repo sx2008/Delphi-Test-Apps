@@ -17,7 +17,7 @@ object Form1: TForm1
     Left = 0
     Top = 71
     Width = 318
-    Height = 193
+    Height = 174
     Align = alClient
     ScrollBars = ssVertical
     TabOrder = 0
@@ -39,7 +39,7 @@ object Form1: TForm1
     object Edit1: TEdit
       Left = 32
       Top = 31
-      Width = 55
+      Width = 69
       Height = 28
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -59,5 +59,13 @@ object Form1: TForm1
       TabOrder = 1
       OnClick = BtnStartClick
     end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 245
+    Width = 318
+    Height = 19
+    Panels = <>
+    SimplePanel = True
   end
 end
