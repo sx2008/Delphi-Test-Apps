@@ -32,14 +32,14 @@ object Form1: TForm1
     object Label1: TLabel
       Left = 33
       Top = 16
-      Width = 32
+      Width = 48
       Height = 13
-      Caption = 'Anzahl'
+      Caption = 'max Prime'
     end
     object Edit1: TEdit
       Left = 32
       Top = 31
-      Width = 69
+      Width = 89
       Height = 28
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -54,8 +54,14 @@ object Form1: TForm1
       Left = 178
       Top = 19
       Width = 75
-      Height = 25
+      Height = 32
       Caption = '&Start'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       OnClick = BtnStartClick
     end

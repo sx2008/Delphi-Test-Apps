@@ -37,17 +37,20 @@ var
 begin
    StatusBar1.SimpleText := '....';
    x := TSieveOfEratosthenes.Create(StrToInt(Edit1.text));
-   x.FindPrimes;
-   Memo1.Lines.BeginUpdate;
-   Memo1.Clear;
-   for i := 0 to x.PrimesFound-1 do
-   begin
-      Memo1.Lines.Add(IntToStr(x.Primes[i]));
-   end;
-   Memo1.Lines.EndUpdate;
+   try
+      x.FindPrimes;
+      Memo1.Lines.BeginUpdate;
+      Memo1.Clear;
+      for i := 0 to x.PrimesFound-1 do
+      begin
+         Memo1.Lines.Add(IntToStr(x.Primes[i]));
+      end;
+      Memo1.Lines.EndUpdate;
 
-   StatusBar1.SimpleText := Format('%d Primzahlen gefunden', [x.PrimesFound]);
-   x.Free;
+      StatusBar1.SimpleText := Format('found %d prime numbers', [x.PrimesFound]);
+   finally
+      x.Free;
+   end;
 
 end;
 
