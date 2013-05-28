@@ -14,7 +14,7 @@ interface
 uses Classes;
 
 (*
-orginal Code see: http://www.iro.umontreal.ca/~panneton/well/WELL512a.c
+orginal Code see: http://www.iro.umontreal.ca/~panneton/well/WELL1024a.c
 /* ***************************************************************************** */
 /* Copyright:      Francois Panneton and Pierre L'Ecuyer, University of Montreal */
 /*                 Makoto Matsumoto, Hiroshima University                        */
