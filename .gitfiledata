@@ -1,5 +1,5 @@
 V1.0
-.gitfiledata|2013-05-13T18:29:29
+.gitfiledata|2013-05-28T13:03:02
 .gitignore|2012-05-11T09:36:38
 ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
@@ -231,7 +231,7 @@ WaehrungDownload\WaehrungDownload.dpr|2012-04-17T16:59:51
 WaehrungDownload\WaehrungDownload.dproj|2012-04-17T16:59:51
 WELL\UWellTest.dfm|2013-05-28T12:57:08
 WELL\UWellTest.pas|2013-05-28T12:55:08
-WELL\Well1024.pas|2013-05-28T12:59:24
+WELL\Well1024.pas|2013-05-28T13:15:50
 WELL\WellTest.dof|2013-05-27T20:07:02
 WELL\WellTest.dpr|2013-05-27T20:04:30
 WindowFrameDemo\Unit1.dfm|2012-04-18T17:13:36
