@@ -34,11 +34,14 @@ procedure TForm1.Button1Click(Sender: TObject);
 var
    i : Integer;
    v : Cardinal;
+   f : Extended;
 begin
   for i := 0 to 100 do
   begin
-    v := FWell.Random;
-    Memo1.Lines.Add(IntToStr(v));
+//  v := FWell.Random;
+//  Memo1.Lines.Add(IntToStr(v));
+    f := FWell.RandomFloat;
+    Memo1.Lines.Add(FloatToStr(f));
   end;
 end;
 

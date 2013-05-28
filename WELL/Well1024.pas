@@ -38,6 +38,7 @@ type
     constructor Create;
     procedure Assign(Source: TPersistent);override;
     function Random:Cardinal;
+    function RandomFloat:Extended;
     procedure Randomize;
   end;
 
@@ -122,6 +123,11 @@ var
 begin
    for i := 0 to 31 do
       STATE[i] := System.Random(MaxInt);
+end;
+
+function TWellRng1024.RandomFloat: Extended;
+begin
+   Result := Random * 2.32830643653869628906e-10;
 end;
 
 end.

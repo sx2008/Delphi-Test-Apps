@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 307
   Top = 138
-  Width = 467
+  Width = 512
   Height = 513
   Caption = 'WELL 1024 Random Number Generator'
   Color = clBtnFace
@@ -16,8 +16,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 367
-    Top = 11
+    Left = 416
+    Top = 12
     Width = 75
     Height = 25
     Caption = 'Get random numbers'
@@ -27,7 +27,7 @@ object Form1: TForm1
   object Memo1: TMemo
     Left = 255
     Top = 5
-    Width = 104
+    Width = 154
     Height = 460
     Lines.Strings = (
       'Memo1')
