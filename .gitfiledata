@@ -1,5 +1,5 @@
 V1.0
-.gitfiledata|2013-05-28T13:32:05
+.gitfiledata|2013-05-28T14:05:48
 .gitignore|2012-05-11T09:36:38
 ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
@@ -88,6 +88,10 @@ Git_DateTime\UStore.pas|2012-05-22T09:54:10
 GlobalMemoryStatus\MemoryUtils.pas|2012-04-19T16:28:32
 GlobalMemoryStatus\ShowMemoryStatus.dof|2012-04-19T16:28:33
 GlobalMemoryStatus\ShowMemoryStatus.dpr|2012-04-19T16:28:08
+HandleStress\HandleStress.dof|2013-06-04T21:58:34
+HandleStress\HandleStress.dpr|2013-06-04T21:58:36
+HandleStress\MainUnit.dfm|2013-06-04T22:10:32
+HandleStress\MainUnit.pas|2013-06-04T22:36:22
 HttpDownloader\HttpDownloader.dof|2011-06-03T14:57:36
 HttpDownloader\HttpDownloader.dpr|2010-10-07T09:45:26
 HttpDownloader\UDownloader.dfm|2011-06-03T14:42:08
