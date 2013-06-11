@@ -1,5 +1,5 @@
 V1.0
-.gitfiledata|2013-05-28T14:05:48
+.gitfiledata|2013-06-04T22:39:33
 .gitignore|2012-05-11T09:36:38
 ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
@@ -126,6 +126,10 @@ MonthCalendarDemo\MonthCalendarDemo.dpr|2012-12-07T15:40:30
 MonthCalendarDemo\UMonthBoldStorage.pas|2012-12-07T16:12:56
 MonthCalendarDemo\Unit1.dfm|2012-12-07T16:06:18
 MonthCalendarDemo\Unit1.pas|2012-12-07T16:28:24
+MultiColorText\MColorText.pas|2012-02-20T15:50:12
+MultiColorText\MultiColorText.dpr|2012-02-20T15:48:40
+MultiColorText\Unit1.dfm|2012-02-20T15:50:36
+MultiColorText\Unit1.pas|2012-02-20T15:50:54
 PageListDemo\PageListDemo.dpr|2012-04-17T16:59:51
 PageListDemo\PageListDemo.dproj|2012-04-17T16:59:51
 PageListDemo\UMainForm.dfm|2012-04-17T16:59:51
