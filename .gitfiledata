@@ -1,5 +1,5 @@
 V1.0
-.gitfiledata|2013-06-04T22:39:33
+.gitfiledata|2013-06-11T12:43:09
 .gitignore|2012-05-11T09:36:38
 ActiveXStarterKit\ActiveXStarterKit.dof|2012-06-15T14:33:44
 ActiveXStarterKit\ActiveXStarterKit.dpr|2007-02-09T18:24:42
@@ -185,8 +185,8 @@ Schachbrett\Schachbrett.dof|2007-03-01T12:53:55
 Schachbrett\Schachbrett.dpr|2007-03-01T12:53:56
 Schachbrett\Unit1.dfm|2007-08-14T14:41:38
 Schachbrett\Unit1.pas|2007-08-14T14:43:02
-selfcheck\MD5windows.pas|2012-05-03T16:25:00
-selfcheck\Selfcheck.dof|2012-04-24T17:22:53
+selfcheck\MD5windows.pas|2013-07-30T14:11:08
+selfcheck\Selfcheck.dof|2013-07-30T14:07:34
 selfcheck\Selfcheck.dpr|2012-04-17T18:01:56
 selfcheck\Unit1.dfm|2012-05-03T16:24:36
 selfcheck\Unit1.pas|2012-05-03T16:24:50
